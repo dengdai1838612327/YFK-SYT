@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>next-fail</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+</head>
+<body>
+<div class="header">
+  <div class="w1100">
+    <div class="logo-box">
+      <img src="images/logo.png" width="200" height="65">
+      <em class="line">|</em>
+      <h4><a href="###">通联卡支付</a></h4>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="w1100">
+    <div class="sec-box">
+      <div class="tab-tit">
+        <ul>
+          <li class="cur"><a href="###">订单信息</a></li>
+        </ul>
+      </div>
+      <div class="tab-con">
+        <div class="fl">
+          <p><label>商户名称：</label><span>渠道自填</span></p>
+          <p><label>商品名称：</label><span>渠道自填</span></p>
+          <p><label>订单时间：</label><span>2017-06-17&nbsp;&nbsp;11:02:09</span></p>
+          <p><label>订&ensp;单&ensp;号：</label><span>199902020200929929292992191</span></p>
+        </div>
+        <div class="fr">
+          <label>金额</label>
+          <p><em>999999.99</em>元</p>
+        </div>
+      </div>
+    </div>
+    <div class="sec-box">
+      <p class="pwd-head">请仔细核对订单信息和以下付款信息：</p>
+      <div class="pwd-box">
+        <p>
+          <label>通联卡卡号：</label>
+          <span>9515 6888 8888 8888 888</span>
+        </p>
+        <p>
+          <label>付&thinsp;&thinsp;款&thinsp;金&thinsp;&thinsp;额：</label>
+          <em>￥131.21</em>
+        </p>
+        <p>
+          <label>请输入卡密码：</label>
+          <input type="text">
+        </p>
+      </div>
+      <div class="pwd-btn-box">
+        <input type="button" class="btn btn-small btn-blue" value="确认付款" onclick="return fail();">
+        <input type="button" class="btn btn-small btn-gray" value="取消">
+      </div>
+    </div>
+  </div>
+  <div class="tips">
+    <div class="w1100">
+      <p>提示信息:</p>
+      <p>1.请您再次核对商城名称及支付金额与您所购商品商城名称及金额是否一致，确认无误后再进行支付。</p>
+      <p>2.支付时请不要开启远程协助功能，避免他人操作您的计算机。如有疑问，请咨询95156。</p>
+    </div>
+  </div>
+  <div class="link">
+    <a href="###">通联卡服务网站>></a>
+  </div>
+</div>
+<div class="footer">
+  <span>Copyright 2015-2016 通联支付网络服务股份有限公司 版权所有沪ICP备09026459号-15</span>
+</div>
+<div id="bg-gray"></div>
+<div class="fail-modal">
+  <div class="modal-head">
+    <label>通联卡卡号</label>
+    <span>9515 6888 8888 8888 888</span>
+  </div>
+  <div class="modal-con">
+    <p class="fail-text">余额不足!</p>
+    <p class="fail-tips">请修改订单或更换支付方式</p>
+    <p class="fail-tips"><em>20</em>秒后自动返回</p>
+  </div>
+  <div class="modal-btn">
+    <input type="button" class="btn btn-middle btn-orange" value="立即返回商城">
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+function fail() {
+  var bggray = $("#bg-gray");
+  var modal = $(".fail-modal");
+  bggray.css("height", window.screen.height);
+  bggray.css("width", window.screen.width);
+  bggray.show();
+  modal.show();
+}
+</script>
+</body>
+</html>
